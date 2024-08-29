@@ -1,0 +1,34 @@
+
+*{
+ padding:0;
+ margin:0;
+ box-sizing: border-box;
+}
+
+h1{
+ font-size: 5rem;
+ font-weight: bold;
+ justify-content: center;
+ color: #212531;
+}
+
+h3{
+ font-size: 2rem;
+ font-weight: bold;
+ justify-content: center;
+ color: #212531;
+}
+
+.one{
+ justify-content: center;
+ display: flex;
+ align-items: center;
+ padding-top: 40vh;
+}
+
+.two{
+ justify-content: center;
+ display: flex;
+ align-items: center;
+ padding-top: 0;
+}
