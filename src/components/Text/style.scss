@@ -9,14 +9,16 @@ h1{
  font-size: 5rem;
  font-weight: bold;
  justify-content: center;
- color: #212531;
+ color: #fff;
+ letter-spacing: 2px;
 }
 
 h3{
  font-size: 2rem;
  font-weight: bold;
  justify-content: center;
- color: #212531;
+ color: #fff;
+ letter-spacing: 3px;
 }
 
 .one{
@@ -32,3 +34,19 @@ h3{
  align-items: center;
  padding-top: 0;
 }
+
+.fade-in{
+   opacity:0;
+  animation: fade-in 1.75s ease-in forwards;
+}
+
+@keyframes fade-in {
+
+ to{
+  opacity: 1;
+ }
+
+}
+  
+
+

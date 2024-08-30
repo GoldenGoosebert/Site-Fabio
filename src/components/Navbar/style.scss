@@ -1,0 +1,54 @@
+     nav {
+      position: fixed;
+      top: 0;
+       width: 100vw;
+      background-color:transparent; 
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      display: inline-block;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      border-radius: 5px;
+    }
+
+    nav ul li a.active {
+      background-color:#598392;
+    }
+
+nav ul li a:hover {
+      background-color: #2C302E; 
+     }
+
+    section {
+      height: 100vh;
+      padding: 20px;
+      border-bottom: 2px solid #000;
+    }
+
+    section:nth-child(odd) {
+      background-color: #000;
+    }
+
+    section:nth-child(even) {
+      background-color: #000;
+    }
+
+html {
+  scroll-behavior: smooth;
+}
