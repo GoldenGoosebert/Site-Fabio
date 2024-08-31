@@ -7,15 +7,15 @@ import './style.scss'
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scrollspy Navbar</title>
-</head>
+    <title>Scrollspy Navbar</title>
+   </head>
  <body>
 <nav>
     <ul>
-      <li><a href="#section1" class="nav-link">Section 1</a></li>
-      <li><a href="#section2" class="nav-link">Section 2</a></li>
-      <li><a href="#section3" class="nav-link">Section 3</a></li>
-      <li><a href="#section4" class="nav-link">Section 4</a></li>
+      <li><a href="#section1" class="nav-link">About me</a></li>
+      <li><a href="#section2" class="nav-link">Testimonials</a></li>
+      <li><a href="#section3" class="nav-link">My work</a></li>
+      <li><a href="#section4" class="nav-link">Contact</a></li>
     </ul>
   </nav>
 
@@ -26,9 +26,28 @@ import './style.scss'
   </section>
 
   <section id="section2">
-    <h2>Section 2</h2>
-    <p>Content for section 2...</p>
-  </section>
+  <div class="container">
+    <div class="testimonial-carousel">
+      <div class="carousel-inner">
+        <div class="testimonial active">
+          <p>"This service has been a game-changer for my business!"</p>
+          <h3>- John Doe</h3>
+        </div>
+        <div class="testimonial">
+          <p>"I can't imagine going back to the old way of doing things."</p>
+          <h3>- Jane Smith</h3>
+        </div>
+        <div class="testimonial">
+          <p>"Top-notch customer service and unbeatable results."</p>
+          <h3>- Mark Johnson</h3>
+        </div>
+      </div>
+      <button class="prev-btn" onclick="prevTestimonial()">&#10094;</button>
+      <button class="next-btn" onclick="nextTestimonial()">&#10095;</button>
+    </div>
+  </div>
+</section>
+  
 
   <section id="section3">
     <h2>Section 3</h2>
@@ -40,31 +59,68 @@ import './style.scss'
     <p>Content for section 4...</p>
   </section>
 
-  <script>
-    // Scrollspy logic
-    document.addEventListener("scroll", function() {
-      const sections = document.querySelectorAll("section");
-      const navLinks = document.querySelectorAll(".nav-link");
+    <script>
 
-      let currentSectionId = "";
-      
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        
-        if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
-          currentSectionId = section.getAttribute("id");
-        }
-      });
 
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").substring(1) === currentSectionId) {
-          link.classList.add("active");
-        }
-      });
+  // Scrollspy logic
+  document.addEventListener("scroll", function () {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    let currentSectionId = "";
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+
+      if (window.pageYOffset >= sectionTop - sectionHeight / 3) {
+        currentSectionId = section.getAttribute("id");
+      }
     });
-  </script>
+
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+      if (link.getAttribute("href").substring(1) === currentSectionId) {
+        link.classList.add("active");
+      }
+    });
+  });
+
+  // Testimonials carousel logic
+  let currentIndex = 0; // Track the current testimonial index
+  const testimonials = document.querySelectorAll(".testimonial"); // Get all testimonials
+  const totalTestimonials = testimonials.length; // Get the total number of testimonials
+
+  function showTestimonial(index) {
+    // Hide all testimonials
+    testimonials.forEach((testimonial, idx) => {
+      testimonial.classList.remove("active");
+      testimonial.style.opacity = 0; // Hide all testimonials
+    });
+
+    // Show the selected testimonial
+    testimonials[index].classList.add("active");
+    testimonials[index].style.opacity = 1; // Show the active testimonial
+  }
+
+  function nextTestimonial() {
+    currentIndex = (currentIndex + 1) % totalTestimonials; // Cycle forward
+    showTestimonial(currentIndex);
+  }
+
+  function prevTestimonial() {
+    currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials; // Cycle backward
+    showTestimonial(currentIndex);
+  }
+
+  // Initialize the first testimonial to be shown
+  showTestimonial(currentIndex);
+
+  // Attach carousel navigation events
+  document.querySelector(".prev-btn").addEventListener("click", prevTestimonial);
+  document.querySelector(".next-btn").addEventListener("click", nextTestimonial);
+
+    </script>
  </body>
 </html>
 

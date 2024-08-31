@@ -28,17 +28,17 @@
     }
 
     nav ul li a.active {
-      background-color:#598392;
+      background-color:#D24A15;
     }
 
 nav ul li a:hover {
-      background-color: #2C302E; 
+      background-color: #DB561E; 
      }
 
     section {
       height: 100vh;
-      padding: 20px;
-      border-bottom: 2px solid #000;
+      padding: 120px;
+      top: 50%;
     }
 
     section:nth-child(odd) {
@@ -52,3 +52,76 @@ nav ul li a:hover {
 html {
   scroll-behavior: smooth;
 }
+
+
+/* Section Styles */
+#services {
+  background-color: #000;
+  padding: 80px 0;
+  text-align: center;
+}
+
+#services .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+
+.testimonial-carousel {
+  margin-top: 50px;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.testimonial {
+  display: none;  
+  text-align: center;
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out; }
+
+.testimonial.active {
+  display: block;
+}
+
+h3 {
+  margin-top: 20px;
+  color: #555;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.2);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
