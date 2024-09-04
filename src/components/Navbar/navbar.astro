@@ -1,5 +1,5 @@
 ---
-import './style.scss'
+import './style.scss';
 ---
 
 <!DOCTYPE html>
@@ -66,19 +66,30 @@ import './style.scss'
   
 
   <section id="section3">
-    <h2>Section 3</h2>
-    <p>Content for section 3...</p>
+<div class="video-carousel">
+    <div class="carousel-inner-video">
+      <div class="carousel-item active">
+            <iframe class="iframeT" width="325" height="600" src="https://www.tiktok.com/embed/yourTikTokVideoID" frameborder="0" allowfullscreen></iframe>
+            <iframe class="iframeT" width="325" height="600" src="https://www.tiktok.com/embed/yourTikTokVideoID" frameborder="0" allowfullscreen></iframe>
+            <iframe class="iframeT" width="325" height="600" src="https://www.tiktok.com/embed/yourTikTokVideoID" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="carousel-item">
+            <iframe class="iframeT" width="325" height="600" src="https://www.tiktok.com/embed/yourTikTokVideoID" frameborder="0" allowfullscreen></iframe>
+            <iframe class="iframeT" width="325" height="600" src="https://www.tiktok.com/embed/yourTikTokVideoID" frameborder="0" allowfullscreen></iframe>
+            <iframe class="iframeT" width="325" height="600" src="https://www.tiktok.com/embed/yourTikTokVideoID" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+    </div>
+  </div>
+
   </section>
 
   <section id="section4">
     <h2>Section 4</h2>
-    <p>Content for section 4...</p>
+      <p>Content for section 4...</p>
   </section>
 
     <script>
-
-
-  // Scrollspy logic
   document.addEventListener("scroll", function () {
     const sections = document.querySelectorAll("section");
     const navLinks = document.querySelectorAll(".nav-link");
@@ -100,25 +111,26 @@ import './style.scss'
         link.classList.add("active");
       }
     });
-  });
-    
-document.addEventListener("DOMContentLoaded", function () {
-  let currentIndex = 0; // Track the current testimonial index
-  const testimonials = document.querySelectorAll(".testimonial"); // Get all testimonials
-  const totalTestimonials = testimonials.length; // Get the total number of testimonials
-  const transitionDuration = 500; // Transition duration in milliseconds (0.5s)
-  const autoScrollInterval = 5000; // Time between auto-scroll in milliseconds (5 seconds)
-  let autoScroll; // Will hold the interval ID
+  });</script>
 
-  // Function to show a specific testimonial
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+  let currentIndex = 0; 
+  const testimonials = document.querySelectorAll(".testimonial"); 
+  const totalTestimonials = testimonials.length; 
+  const transitionDuration = 500; 
+  const autoScrollInterval = 5000; 
+  let autoScroll; 
+
+  
   function showTestimonial(index) {
-    // Hide all testimonials with fade out
+    
     testimonials.forEach((testimonial) => {
       testimonial.classList.remove("active");
-      testimonial.style.opacity = 0; // Start fading out
+      testimonial.style.opacity = 0; 
     });
 
-    // Wait for the fade-out to finish before showing the new testimonial
+    
     setTimeout(() => {
       testimonials.forEach((testimonial) => {
         testimonial.style.display = "none";
@@ -126,51 +138,86 @@ document.addEventListener("DOMContentLoaded", function () {
 
       testimonials[index].style.display = "block";
       setTimeout(() => {
-        testimonials[index].style.opacity = 1; // Fade in the active testimonial
+        testimonials[index].style.opacity = 1; 
       }, 50);
-    }, transitionDuration); // Wait for fade-out duration
+    }, transitionDuration);
   }
 
-  // Show the next testimonial
+  
   function nextTestimonial() {
     currentIndex = (currentIndex + 1) % totalTestimonials;
     showTestimonial(currentIndex);
   }
 
-  // Show the previous testimonial
+  
   function prevTestimonial() {
     currentIndex = (currentIndex - 1 + totalTestimonials) % totalTestimonials;
     showTestimonial(currentIndex);
   }
 
-  // Start auto-scrolling the testimonials
+  
   function startAutoScroll() {
     autoScroll = setInterval(nextTestimonial, autoScrollInterval);
   }
 
-  // Stop auto-scrolling
+  
   function stopAutoScroll() {
     clearInterval(autoScroll);
   }
 
-  // Initialize the first testimonial to be shown
+  
   showTestimonial(currentIndex);
-  startAutoScroll(); // Start auto-scroll when the page loads
-
-  // Attach carousel navigation events
-  document.querySelector(".prev-btn").addEventListener("click", function () {
-    stopAutoScroll(); // Stop auto-scroll when manually navigating
-    prevTestimonial();
-    startAutoScroll(); // Restart auto-scroll after manual navigation
-  });
-
-  document.querySelector(".next-btn").addEventListener("click", function () {
-    stopAutoScroll(); // Stop auto-scroll when manually navigating
-    nextTestimonial();
-    startAutoScroll(); // Restart auto-scroll after manual navigation
-  });
+  startAutoScroll(); 
 });
-    </script>
+  </script>
+
+    <script>
+
+document.addEventListener('DOMContentLoaded', function() {
+  const items = document.querySelectorAll('.carousel-item');
+  const transitionDurationC = 500;
+  const autoScrollIntervalC = 5000;
+  const totalItems = items.length;
+
+  let currentIndexC = 0;
+  let autoScrollC;
+
+    
+
+    function showItem(index) {
+    items.forEach((item, i) => {
+      if (i === index) {
+        item.style.display = "flex"; 
+        setTimeout(() => {
+          item.style.opacity = 1; 
+        }, 50);
+      } else {
+        
+        item.style.opacity = 0;
+        setTimeout(() => {
+          item.style.display = "none"; 
+        }, transitionDurationC);
+      }
+    });
+  }
+  function nextItem(){
+    currentIndexC = (currentIndexC + 1) % totalItems;
+    showItem(currentIndexC);
+  }
+
+  function startAutoScroll(){
+    autoScrollC = setInterval(nextItem, autoScrollIntervalC);
+  }
+
+  function stopAutoScroll(){
+    clearInterval(autoScrollC);
+  }
+
+
+  showItem(currentIndexC);
+  startAutoScroll();
+});
+      </script>
  </body>
 </html>
 
