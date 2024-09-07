@@ -1,4 +1,3 @@
- document.addEventListener("DOMContentLoaded", function () {
   let currentIndex = 0; 
   const testimonials = document.querySelectorAll(".testimonial"); 
   const totalTestimonials = testimonials.length; 
@@ -64,5 +63,4 @@
     nextTestimonial();
     startAutoScroll(); 
   });
-});
 

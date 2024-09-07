@@ -1,0 +1,34 @@
+.video-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-inner-vid {
+  display: flex;
+  width: 100%; 
+  transition: transform 0.5s ease-in-out; 
+}
+
+.carousel-item{
+  display: flex;
+  justify-content: space-between;  
+  opacity: 0; 
+  transition: opacity 0.5s ease-in-out;
+  align-items: center;
+  gap: 5rem;
+  margin: 0;    
+  padding-left: 4.75rem;
+  padding-right: 4.75rem;
+  padding-bottom: 10rem;
+}
+
+.carousel-item.active{
+  opacity: 1; 
+}
+
+
+
+
+
+
