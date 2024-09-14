@@ -1,34 +1,21 @@
-.video-carousel {
+.video-mosaic {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 columns of equal width */
+  gap: 10px;
+  /* spacing between videos */
+}
+
+.video-container {
   position: relative;
-  width: 100%;
   overflow: hidden;
+  aspect-ratio: 16/9;
+  /* Maintain 16:9 aspect ratio */
 }
 
-.carousel-inner-vid {
-  display: flex;
-  width: 100%; 
-  transition: transform 0.5s ease-in-out; 
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensure video covers the entire container */
 }
-
-.carousel-item{
-  display: flex;
-  justify-content: space-between;  
-  opacity: 0; 
-  transition: opacity 0.5s ease-in-out;
-  align-items: center;
-  gap: 5rem;
-  margin: 0;    
-  padding-left: 4.75rem;
-  padding-right: 4.75rem;
-  padding-bottom: 10rem;
-}
-
-.carousel-item.active{
-  opacity: 1; 
-}
-
-
-
-
-
-
