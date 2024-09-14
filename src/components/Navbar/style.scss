@@ -39,8 +39,9 @@ nav ul li a:hover {
 
 section {
   height: 100vh;
-  padding: 120px;
+  padding: 5vw;
   top: 50%;
+  overflow: hidden;
 }
 
 section:nth-child(odd) {
@@ -74,8 +75,4 @@ html {
   height: 720px;
   padding-top: 350px;
   padding-bottom: 60px;
-}
-
-section {
-  overflow: hidden;
 }
