@@ -1,9 +1,12 @@
 nav {
   position: fixed;
-  top: 0;
-  width: 100vw;
-  background-color: transparent;
+  top: 15%;
+  width: 2.5rem;
+  height: 100vh;
+  background-color: #000;
   z-index: 1000;
+  margin: 0.5rem;
+  padding-top: 10.5vh;
 }
 
 nav ul {
@@ -12,10 +15,12 @@ nav ul {
   padding: 0;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 1.5rem;
+  padding: 0;
 }
 
 nav ul li a {
@@ -39,7 +44,7 @@ nav ul li a:hover {
 
 section {
   height: 100vh;
-  padding: 5vw;
+  padding: 0;
   top: 50%;
   overflow: hidden;
 }
@@ -59,20 +64,51 @@ html {
 .content-section {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-  padding-bottom: 32.25vh;
-  z-index: 100000000;
+  justify-content: center;
+  flex-direction: column;
+  z-index: 100000;
 }
 
 .contain {
   flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .video {
   flex-shrink: 1;
-  width: 600px;
+  width: 900px;
   height: 720px;
-  padding-top: 350px;
-  padding-bottom: 60px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5.5vh;
+  padding-bottom: 5.5vh;
+}
+
+#section1 {
+  padding-right: 5vw;
+  padding-left: 5vw;
+  height: 105vh;
+}
+
+p1,
+p2 {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  font-weight: medium;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+p1 {
+  font-weight: bold;
+  padding-top: 35vh;
+}
+
+p2 {
+  font-weight: medium;
 }

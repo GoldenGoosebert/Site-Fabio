@@ -10,7 +10,6 @@
   margin: auto;
 }
 
-
 .testimonial-carousel {
   margin-top: 50px;
   position: relative;
@@ -22,9 +21,9 @@
   background-color: #000;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  padding-top:  11.25rem;
-  justify-content:center;
-  text-align:center;
+  padding-top: 11.25rem;
+  justify-content: center;
+  text-align: center;
 }
 
 .carousel-inner {
@@ -32,13 +31,12 @@
 }
 
 .testimonial {
-  display: none;  
+  display: none;
   text-align: center;
-  opacity: 0; 
+  opacity: 0;
   transition: opacity 0.5s ease-in-out;
   justify-content: center;
   align-items: center;
-
 }
 
 .testimonial.active {
@@ -50,14 +48,14 @@ h3 {
   color: #555;
 }
 
-
-p{
+p {
   color: #fff;
   font-weight: semi-bold;
 }
 
-.pfp{
-  border-radius: 50%; /* Make the container circular */
+.pfp {
+  border-radius: 50%;
+  /* Make the container circular */
   overflow: hidden;
   display: block;
   width: 100px;
@@ -65,33 +63,8 @@ p{
   margin: auto;
 }
 
-.pfp img{
+.pfp img {
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
-
-p2{
-      font-weight: bold;
-      font-size: 1.25rem;
-      align-items: flex-start;
-      display: flex;
-      justify-content:flex-start;
-      padding-top: 2.25vh;
-      margin: 0;
-      color: #fff;
-      max-width:650px;
-     }
-  
-p1{
-      font-weight: medium;
-      font-size: 1.25rem;
-      align-items: flex-start;
-      display: flex;
-      justify-content:left;
-      margin: 0;
-      color: #fff;
-      max-width:600px;
-      padding-top: 30vh;
-     }
-
