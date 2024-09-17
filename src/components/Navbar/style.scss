@@ -3,7 +3,7 @@ nav {
   top: 15%;
   width: 2.5rem;
   height: 100vh;
-  background-color: #000;
+  background-color: transparent;
   z-index: 1000;
   margin: 0.5rem;
   padding-top: 10.5vh;
@@ -90,7 +90,7 @@ html {
 #section1 {
   padding-right: 5vw;
   padding-left: 5vw;
-  height: 105vh;
+  height: 125vh;
 }
 
 p1,
@@ -106,7 +106,7 @@ p2 {
 
 p1 {
   font-weight: bold;
-  padding-top: 35vh;
+  padding-top: 35.5vh;
 }
 
 p2 {

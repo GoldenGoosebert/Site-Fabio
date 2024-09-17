@@ -1,0 +1,57 @@
+#section4 {
+  margin: 0;
+  padding: 0;
+  height: 90vh;
+  padding-bottom: 60vh;
+}
+
+h2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: medium;
+  font-style: italic;
+}
+
+.discord-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.twitter-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2.contact-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.contact-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  text-decoration: none;
+  margin-bottom: 5rem;
+  font-style: italic;
+}
+
+.contact-text {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 3.2rem;
+  text-decoration: none;
+}
