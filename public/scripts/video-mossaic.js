@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   const videos = document.querySelectorAll(".video-mosaic video");
+  const videos2 = document.querySelectorAll(".video-mosaic-2 video");
 
   videos.forEach((video) => {
     // Event listener for mouse hover
@@ -8,18 +9,34 @@ document.addEventListener("DOMContentLoaded", function() {
       video.play(); // Play the video when hovered
     });
 
-    // Event listener for mouse leave
     video.addEventListener("mouseleave", () => {
-      video.pause(); // Pause the video when mouse leaves
-      video.currentTime = 0; // Reset to the beginning
+      video.pause();
+      video.currentTime = 0;
     });
 
-    // Loop the video based on custom time duration
-    const loopDuration = 5; // Define how long in seconds before the video loops
+    const loopDuration = 5;
     setInterval(() => {
       if (video.currentTime >= loopDuration) {
-        video.currentTime = 0; // Reset the video time
+        video.currentTime = 0;
       }
-    }, 1000); // Check every second
+    }, 1000);
+  });
+  videos2.forEach((video) => {
+    video.addEventListener("mouseenter", () => {
+      video.currentTime = 0;
+      video.play();
+    });
+
+    video.addEventListener("mouseleave", () => {
+      video.pause();
+      video.currentTime = 0;
+    });
+
+    const loopDuration = 5;
+    setInterval(() => {
+      if (video.currentTime >= loopDuration) {
+        video.currentTime = 0;
+      }
+    }, 1000);
   });
 });

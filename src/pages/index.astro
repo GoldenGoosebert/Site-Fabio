@@ -1,6 +1,7 @@
 ---
 import Text from '../components/Text/Text.astro';
 import Navbar from '../components/Navbar/navbar.astro'
+import './style.css'
 ---
 
 <!doctype html>
@@ -9,41 +10,15 @@ import Navbar from '../components/Navbar/navbar.astro'
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="../../public/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Site</title>
+		<title>Portfolio</title>
 	</head>
     <body>
         <div class="bg-video">
-            <video class="background-video" poster="" playsinline autoplay muted loop>
-                <source src="../../public/bg top.mp4" type="video/mp4">
+            <video class="background-video" playsinline autoplay muted loop>
+        <source src="../../public/bg top.mp4" type="video/mp4">
             </video>
         </div>
   	<Text />
 	<Navbar />
-	<style>
-body{
-	background-color: transparent;
-	}
-body::-webkit-scrollbar {
-  width: 0.25rem;
-}
-
-body::-webkit-scrollbar-track {
-  background: #1e1e24;
-}
-
-body::-webkit-scrollbar-thumb {
-  background: #333;
-}
-
-video.background-video{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  object-fit: cover;
-  object-position: center;
-  z-index:-1;
-}
-</style>

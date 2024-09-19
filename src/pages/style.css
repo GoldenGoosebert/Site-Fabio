@@ -1,0 +1,25 @@
+body {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar {
+  width: 0.15rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #333;
+}
+
+video.background-video {
+  position: absolute;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: -1;
+}

@@ -5,12 +5,27 @@
   padding: 0;
 }
 
+.video-mosaic-2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0;
+  padding: 0;
+}
+
 .video-container {
   position: relative;
   overflow: hidden;
   aspect-ratio: 16/9;
   width: 100%;
   height: 500px;
+}
+
+.video-container-2 {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  width: 100%;
+  height: 900px;
 }
 
 video {
