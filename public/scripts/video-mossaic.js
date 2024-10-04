@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+ document.addEventListener("DOMContentLoaded", function() {
   const videos = document.querySelectorAll(".video-mosaic video");
   const videos2 = document.querySelectorAll(".video-mosaic-2 video");
 
